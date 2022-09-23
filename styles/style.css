@@ -6,35 +6,30 @@
 }
 
 body {
-    background-color: #000000;
     padding: 0;
     margin: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
     font-family: Roboto, Arial, sans-serif;
     color: #ffffff;
     background-color: #000000;
-    overflow: hidden;
 }
 
 .container {
     box-sizing: border-box;
-	position: relative;
-	margin: 200px auto;
-	width: 300px;
-	height: 300px;
-	perspective: 500px;
+    position: absolute;
+    top: calc(50vh - 150px);
+    left: calc(50vw - 150px);
+    width: 300px;
+    height: 300px;
+    perspective: 500px;
 }
 
 .cube {
     box-sizing: border-box;
-	width: inherit;
-	height: inherit;
-	transform-style: preserve-3d;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
     animation: rotation-3d 6.4s linear infinite;
 }
 
@@ -45,56 +40,54 @@ body {
 @keyframes rotation-3d {
     0% {
         transform: rotateX(0) rotateY(0);
-        border-color: #00ff00;
     }
     100% {
         transform: rotateX(360deg) rotateY(360deg);
-        border-color: #00ff00;
     }
 }
 
 .side {
     box-sizing: border-box;
-	position: absolute;
-	width: inherit;
-	height: inherit;
+    position: absolute;
+    width: 300px;
+    height: 300px;
 }
 
 .side div {
-	position: absolute;
+    position: absolute;
     box-sizing: border-box;
-	width: 250px;
-	height: 250px;
+    width: 250px;
+    height: 250px;
     margin: 25px;
-	border: 5px solid #00ff00;
-	font: normal 70px Arial;
-	text-align: center;
-	line-height: 250px;
-	color: #fff;
+    border: 5px solid #00ff00;
+    font-fize: 60px;
+    text-align: center;
+    line-height: 250px;
+    color: #ffffff;
     background-color: #00000066;
     border-radius: 50px;
 }
 
 .front {
-	transform: translateZ(150px);
+    transform: translateZ(150px);
 }
 
 .back {
-	transform: rotateY(180deg) translateZ(150px);
+    transform: rotateY(180deg) translateZ(150px);
 }
 
 .right {
-	transform: rotateY(90deg) translateZ(150px);
+    transform: rotateY(90deg) translateZ(150px);
 }
 
 .left {
-	transform: rotateY(-90deg) translateZ(150px);
+    transform: rotateY(-90deg) translateZ(150px);
 }
 
 .top {
-	transform: rotateX(90deg) translateZ(150px);
+    transform: rotateX(90deg) translateZ(150px);
 }
 
 .bottom {
-	transform: rotateX(-90deg) translateZ(150px);
+    transform: rotateX(-90deg) translateZ(150px);
 }
